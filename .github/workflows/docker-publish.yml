@@ -3,6 +3,8 @@ name: Create and publish a Docker image
 on:
   release:
     types: [published]
+  schedule:
+    - cron:  '30 5 * * *'
 
 env:
   REGISTRY: ghcr.io
