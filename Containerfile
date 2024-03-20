@@ -1,4 +1,4 @@
-FROM alpine:3.18
+FROM alpine:3.19
 
 RUN apk add --no-cache \
     bash \
@@ -24,12 +24,14 @@ RUN apk add --no-cache --virtual=build-dependencies \
         curl \
         gcc \
         g++ \
+        libdvbcsa-dev \
         libusb-dev \
         linux-headers \
         make \
         tar && \
     apk add --no-cache \
         ccid \
+        libdvbcsa \
         libusb \
         openssl-dev
 
